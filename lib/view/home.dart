@@ -12,7 +12,9 @@ class HomeState extends State<Home>{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Scaffold();
+    return Scaffold(
+      body: Text('Mayif'),
+    );
   }
   
 }

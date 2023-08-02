@@ -153,7 +153,7 @@ class LoginState extends State<Login>{
                 style: TextStyle(
                     color: Colors.black, fontSize: 14.0, fontWeight: FontWeight.bold)),*/
             SizedBox(height: 3.0),
-            FlatButton(
+            TextButton(
               child: new Text("Ok"),
               onPressed: () {
                 Navigator.of(context).pop();
