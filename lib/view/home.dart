@@ -1,4 +1,10 @@
+import 'package:arrosage/view/setting.dart';
 import 'package:flutter/material.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:line_icons/line_icons.dart';
+
+import 'commande.dart';
+import 'historique.dart';
 
 class Home extends StatefulWidget{
   @override
@@ -10,6 +16,7 @@ class Home extends StatefulWidget{
 }
 class HomeState extends State<Home>{
 
+  int _selectedIndex = 0;
 
   List<Widget> _widgetOptions = <Widget>[
     Commande(),
@@ -51,7 +58,7 @@ class HomeState extends State<Home>{
               color: Colors.black,
               tabs: [
                 GButton(
-                  icon: LineIcons.qrcode,
+                  icon: LineIcons.check,
                   text: 'Commande',
                 ),
                 GButton(
@@ -59,7 +66,7 @@ class HomeState extends State<Home>{
                   text: 'Historique',
                 ),
                 GButton(
-                  icon: LineIcons.search,
+                  icon: LineIcons.pen,
                   text: 'Parametre',
                 ),
               ],

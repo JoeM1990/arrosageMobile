@@ -12,7 +12,11 @@ class HistoriqueState extends State<Historique>{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Scaffold();
+    return Scaffold(
+      body: Text('Historique', style: TextStyle(
+        color: Colors.blueAccent,
+      ),),
+    );
   }
   
 }
