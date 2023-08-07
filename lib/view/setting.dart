@@ -13,9 +13,11 @@ class SettingState extends State<Setting>{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      body: Text('Parametre', style: TextStyle(
-        color: Colors.blueAccent,
-      ),),
+      body: Center(
+        child: Text('Parametre', style: TextStyle(
+            color: Colors.black, fontSize: 32
+        ),),
+      ),
     );
   }
   

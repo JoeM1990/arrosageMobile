@@ -35,7 +35,7 @@ class HomeState extends State<Home>{
       ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          color: Color.fromRGBO(105, 108, 255,10),
+          color:Colors.white,
           boxShadow: [
             BoxShadow(
               blurRadius: 20,

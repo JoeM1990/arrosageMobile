@@ -13,9 +13,11 @@ class HistoriqueState extends State<Historique>{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      body: Text('Historique', style: TextStyle(
-        color: Colors.blueAccent,
-      ),),
+      body: Center(
+        child: Text('Historique', style: TextStyle(
+          color: Colors.black, fontSize: 32
+        ),),
+      ),
     );
   }
   

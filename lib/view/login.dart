@@ -28,7 +28,7 @@ class LoginState extends State<Login>{
                   height: 400,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage('assets/images/background.png'),
+                          image: AssetImage('assets/background.png'),
                           fit: BoxFit.fill
                       )
                   ),
