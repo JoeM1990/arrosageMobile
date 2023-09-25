@@ -18,7 +18,7 @@ class CommandeState extends State<Commande>{
           child: Column(
             children: <Widget>[
               SizedBox(height: 70,),
-              Text("10 °C",
+              Text("10 %",
                 style: TextStyle(
                     color: Color.fromRGBO(9, 9, 9, 1.0), fontSize: 62.0),),
               SizedBox(height: 30,),
@@ -45,7 +45,7 @@ class CommandeState extends State<Commande>{
                           )
                       ),
                       child: Center(
-                        child: Text("Check °", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                        child: Text("Check %", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
                       ),
                     ),
                     SizedBox(height: 10,),
