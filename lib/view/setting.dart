@@ -49,7 +49,7 @@ class SettingState extends State<Setting>{
                       child: Padding(
                         padding: const EdgeInsets.all(1.0),
                         child: Text('M', style: TextStyle(
-                          color: Color.fromRGBO(26, 28, 40, 1),
+                          color: Colors.blueAccent,
                           fontSize: 80,
                         ),),
                       ),
@@ -93,7 +93,7 @@ class SettingState extends State<Setting>{
               style: TextStyle(
                   fontSize: 13,
                   fontFamily: 'Ubuntu-Regular',
-                  color: Colors.black),
+                  color: Colors.blueAccent),
             ),
             subtitle: Text(
               'Jordan',
@@ -101,7 +101,7 @@ class SettingState extends State<Setting>{
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Ubuntu-Regular',
                   fontStyle: FontStyle.italic,
-                  color: Colors.black),
+                  color: Colors.blueAccent),
             ),
             trailing: Icon(Icons.account_circle,
               color: Colors.black,
@@ -117,7 +117,7 @@ class SettingState extends State<Setting>{
               style: TextStyle(
                   fontSize: 13,
                   fontFamily: 'Ubuntu-Regular',
-                  color: Colors.black),
+                  color: Colors.blueAccent),
             ),
             subtitle: Text(
               'Admin',
@@ -125,7 +125,7 @@ class SettingState extends State<Setting>{
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Ubuntu-Regular',
                   fontStyle: FontStyle.italic,
-                  color: Colors.black),
+                  color: Colors.blueAccent),
             ),
             trailing: Icon(Icons.accessibility,
               color: Colors.black,
@@ -143,7 +143,7 @@ class SettingState extends State<Setting>{
                 style: TextStyle(
                     fontSize: 13,
                     fontFamily: 'Ubuntu-Regular',
-                    color: Colors.black),
+                    color: Colors.blueAccent),
               ),
               subtitle: Text(
                 'Deconnexion',
@@ -151,7 +151,7 @@ class SettingState extends State<Setting>{
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Ubuntu-Regular',
                     fontStyle: FontStyle.italic,
-                    color: Colors.black),
+                    color: Colors.blueAccent),
               ),
               trailing: Icon(Icons.logout,
                 color: Colors.black,
