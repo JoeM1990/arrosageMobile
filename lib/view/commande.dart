@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class Commande extends StatefulWidget{
   @override
@@ -9,6 +10,12 @@ class Commande extends StatefulWidget{
   
 }
 class CommandeState extends State<Commande>{
+
+  String pourcentage = '10 %';
+  int p = 10;
+
+  String msg = "...";
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -18,13 +25,15 @@ class CommandeState extends State<Commande>{
           child: Column(
             children: <Widget>[
               SizedBox(height: 70,),
-              Text("10 %",
+              Text('$p',
                 style: TextStyle(
-                    color: Color.fromRGBO(9, 9, 9, 1.0), fontSize: 62.0),),
-              SizedBox(height: 30,),
-              Text("00 : 00",
+                    color: Color.fromRGBO(9, 9, 9, 1.0), fontSize: 110.0),),
+              SizedBox(height: 0,),
+              // Text("00 : 00",
+              //   style: TextStyle(color: Color.fromRGBO(9, 9, 9, 1.0), fontSize: 22.0),),
+              SizedBox(height: 50,),
+              Text('$msg',
                 style: TextStyle(color: Color.fromRGBO(9, 9, 9, 1.0), fontSize: 22.0),),
-              SizedBox(height: 150,),
 
 
 
@@ -45,7 +54,12 @@ class CommandeState extends State<Commande>{
                           )
                       ),
                       child: Center(
-                        child: Text("Check %", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                         child: GestureDetector(
+                           child: Text("Check %", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                           onTap: (){
+                             commandeCheck();
+                           },
+                         ),
                       ),
                     ),
                     SizedBox(height: 10,),
@@ -60,9 +74,17 @@ class CommandeState extends State<Commande>{
                               ]
                           )
                       ),
-                      child: Center(
-                        child: Text("Demarrer", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
-                      ),
+
+                        //child: Text("Demarrer", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                        child: Center(
+                          child: GestureDetector(
+                            child: Text("Demarrer", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                            onTap: (){
+                              commandeOn();
+                            },
+                          ),
+                        ),
+
                     ),
                     SizedBox(height: 20,),
                     Container(
@@ -77,7 +99,12 @@ class CommandeState extends State<Commande>{
                           )
                       ),
                       child: Center(
-                        child: Text("Eteindre", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                         child: GestureDetector(
+                           child: Text("Eteindre", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+                           onTap: (){
+                             commandeOff();
+                           },
+                         ),
                       ),
                     ),
                   ],
@@ -89,6 +116,31 @@ class CommandeState extends State<Commande>{
         ),
       ),
     );
+  }
+
+  Future<void> commandeOn() async {
+    await http.post(Uri.parse('https://www.project.monkila-tech.com/on?'));
+
+    setState(() {
+      msg = "Statut : Arrosage en cours";
+    });
+  }
+
+  Future<void> commandeOff() async {
+    await http.post(Uri.parse('https://www.project.monkila-tech.com/off?'));
+
+    setState(() {
+      msg = "Statut : Arrosage interrompu";
+    });
+  }
+
+  Future<void> commandeCheck() async {
+
+    setState(() {
+      p++;
+    });
+
+    await http.post(Uri.parse('https://www.project.monkila-tech.com/check?'));
   }
   
 }
